@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './TrialModal.css';
 
 interface TrialModalProps {
@@ -7,6 +7,16 @@ interface TrialModalProps {
 }
 
 const TrialModal: React.FC<TrialModalProps> = ({ isOpen, onClose }) => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [prevIsOpen, setPrevIsOpen] = useState(isOpen);
+
+  if (isOpen !== prevIsOpen) {
+    setPrevIsOpen(isOpen);
+    if (isOpen) {
+      setIsLoading(true);
+    }
+  }
+
   // Prevent scrolling when modal is open
   useEffect(() => {
     if (isOpen) {
@@ -28,14 +38,26 @@ const TrialModal: React.FC<TrialModalProps> = ({ isOpen, onClose }) => {
           &times;
         </button>
         <div className="modal-iframe-container">
+          {isLoading && (
+            <div className="skeleton-loader" aria-hidden="true">
+              <div className="skeleton-header"></div>
+              <div className="skeleton-field"></div>
+              <div className="skeleton-field"></div>
+              <div className="skeleton-field"></div>
+              <div className="skeleton-field"></div>
+              <div className="skeleton-button"></div>
+            </div>
+          )}
           <iframe
-            src="https://forms.gle/SzwLpHw5om2GuS4U7"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdX4uY22N0R_9f5V_8xPqH0A1_32P15A36G_F9P7hPZ6H2B/viewform?embedded=true"
             title="Claim Trial Google Form"
             width="100%"
             height="100%"
             frameBorder="0"
             marginHeight={0}
             marginWidth={0}
+            onLoad={() => setIsLoading(false)}
+            style={{ display: isLoading ? 'none' : 'block' }}
           >
             Loading…
           </iframe>
