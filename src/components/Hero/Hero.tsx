@@ -25,11 +25,7 @@ const slides = [
   }
 ];
 
-interface HeroProps {
-  onOpenModal: () => void;
-}
-
-const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
+const Hero: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -59,13 +55,6 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
               <a href="#locations" className="btn btn-primary">
                 {slide.buttonText}
               </a>
-              <button
-                className="btn btn-secondary"
-                onClick={onOpenModal}
-                style={{ marginLeft: '15px', backgroundColor: '#ff8c00', borderColor: '#ff8c00', color: '#fff' }}
-              >
-                Claim Trial
-              </button>
             </div>
           </div>
         </div>

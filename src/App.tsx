@@ -31,7 +31,7 @@ const App: React.FC = () => {
     <div className="app-container">
       <Header />
       <main>
-        <Hero onOpenModal={() => setIsModalOpen(true)} />
+        <Hero />
         <Locations />
         <Features />
         <Testimonials />

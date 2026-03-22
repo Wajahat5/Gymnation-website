@@ -4,22 +4,26 @@ import './InstagramFeed.css';
 const feedItems = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=2070&auto=format&fit=crop',
+    image: '/Gymnation-website/assets/instagram/reel1.jpg',
+    url: 'https://www.instagram.com/reel/DMNuYh_yB5B/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
     alt: 'Gym Nation Dibrugarh heavy deadlift session'
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=2069&auto=format&fit=crop',
+    image: '/Gymnation-website/assets/instagram/reel2.jpg',
+    url: 'https://www.instagram.com/reel/DBtGhdxCoUC/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
     alt: 'Ladies doing yoga at Gym Nation Pink Dibrugarh'
   },
   {
     id: 3,
-    image: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=2070&auto=format&fit=crop',
+    image: '/Gymnation-website/assets/instagram/reel3.jpg',
+    url: 'https://www.instagram.com/reel/DOgiaZoD04z/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
     alt: 'New hammer strength equipment arriving at Gymnation Xtreme'
   },
   {
     id: 4,
-    image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop',
+    image: '/Gymnation-website/assets/instagram/reel4.jpg',
+    url: 'https://www.instagram.com/reel/C551MMovE0z/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
     alt: 'Circuit House branch early morning gym workout'
   }
 ];
@@ -61,7 +65,7 @@ const InstagramFeed: React.FC = () => {
           {feedItems.map((item, index) => (
             <a
               key={item.id}
-              href="https://instagram.com/gymnation_dib"
+              href={item.url}
               target="_blank"
               rel="noopener noreferrer"
               className="instagram-post fade-up"
