@@ -1,0 +1,126 @@
+.main-footer {
+  position: relative;
+  border-top: 3px solid var(--safety-orange);
+  overflow: hidden;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 20px;
+  gap: 50px;
+}
+
+@media (min-width: 992px) {
+  .footer-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.contact-info {
+  flex: 1;
+  max-width: 500px;
+}
+
+.footer-logo {
+  height: 60px;
+  margin-bottom: 30px;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.contact-title span {
+  color: var(--safety-orange);
+}
+
+.contact-desc {
+  font-size: 1.1rem;
+  color: var(--text-gray);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.phone-cta {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.phone-cta i {
+  font-size: 1.5rem;
+  color: var(--safety-orange);
+  margin-right: 15px;
+}
+
+.phone-number {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: var(--font-headings);
+  color: var(--crisp-white);
+  transition: color 0.3s ease;
+}
+
+.phone-number:hover {
+  color: var(--safety-orange);
+}
+
+.book-tour-btn {
+  font-size: 1.2rem;
+  padding: 15px 40px;
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .book-tour-btn {
+    width: auto;
+  }
+}
+
+.social-links {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: #1a1a1a;
+  border-radius: 50%;
+  color: var(--crisp-white);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: var(--safety-orange);
+  transform: translateY(-3px);
+}
+
+.map-container {
+  flex: 1;
+  width: 100%;
+  height: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid #333;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #050505;
+  color: #555;
+  font-size: 0.9rem;
+}
