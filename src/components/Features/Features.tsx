@@ -32,7 +32,7 @@ const featuresData = [
   },
   {
     feature: "Female Trainers",
-    circuitHouse: true,
+    circuitHouse: false,
     xtreme: true,
     pink: "Exclusive",
     desc: "Expert guidance available"
