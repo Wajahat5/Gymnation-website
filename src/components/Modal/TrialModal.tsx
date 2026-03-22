@@ -49,7 +49,7 @@ const TrialModal: React.FC<TrialModalProps> = ({ isOpen, onClose }) => {
             </div>
           )}
           <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSdX4uY22N0R_9f5V_8xPqH0A1_32P15A36G_F9P7hPZ6H2B/viewform?embedded=true"
+            src="https://docs.google.com/forms/d/e/1FAIpQLScivM4d2LU38LpsI9GwCRbhMPfRrsaqVMg77bW4mbtL4FwQKQ/viewform?usp=header"
             title="Claim Trial Google Form"
             width="100%"
             height="100%"
