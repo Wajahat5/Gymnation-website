@@ -1,0 +1,99 @@
+.instagram-section {
+  padding: 60px 0;
+  background-color: var(--deep-black);
+  text-align: center;
+}
+
+.instagram-header {
+  margin-bottom: 40px;
+}
+
+.instagram-header h2 {
+  font-size: 2.5rem;
+  color: var(--crisp-white);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.instagram-header a {
+  font-size: 1.2rem;
+  color: var(--safety-orange);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.instagram-header a:hover {
+  color: #e07b00;
+  text-decoration: underline;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.instagram-post {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 8px;
+  display: block;
+}
+
+.instagram-post img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.instagram-post:hover img {
+  transform: scale(1.1);
+  filter: brightness(0.7);
+}
+
+.instagram-post-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 140, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.instagram-post:hover .instagram-post-overlay {
+  opacity: 1;
+}
+
+.instagram-post-overlay i {
+  color: #fff;
+  font-size: 2rem;
+}
+
+@media (max-width: 992px) {
+  .instagram-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .instagram-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+  .instagram-header h2 {
+    font-size: 2rem;
+  }
+}

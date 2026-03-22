@@ -25,7 +25,11 @@ const slides = [
   }
 ];
 
-const Hero: React.FC = () => {
+interface HeroProps {
+  onOpenModal: () => void;
+}
+
+const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -38,20 +42,31 @@ const Hero: React.FC = () => {
 
   return (
     <section id="hero" className="hero-slider">
+      <h1 className="visually-hidden">Gym Nation Dibrugarh</h1>
       {slides.map((slide, index) => (
         <div key={index} className={`slide ${index === currentSlide ? 'active' : ''}`}>
-          <div
+          <img
+            src={slide.image}
             className="slide-bg"
-            style={{ backgroundImage: `url(${slide.image})` }}
-          ></div>
+            alt={`Gym Nation Dibrugarh ${slide.title} ${slide.subtitle}`}
+          />
           <div className="slide-content container">
-            <h1 className="hero-title fade-up visible">
+            <div className="hero-title fade-up visible">
               {slide.title} <span>{slide.highlight}</span>
-            </h1>
+            </div>
             <p className="hero-subtitle fade-up visible">{slide.subtitle}</p>
-            <a href="#locations" className="btn btn-primary fade-up visible">
-              {slide.buttonText}
-            </a>
+            <div className="hero-buttons fade-up visible">
+              <a href="#locations" className="btn btn-primary">
+                {slide.buttonText}
+              </a>
+              <button
+                className="btn btn-secondary"
+                onClick={onOpenModal}
+                style={{ marginLeft: '15px', backgroundColor: '#ff8c00', borderColor: '#ff8c00', color: '#fff' }}
+              >
+                Claim Trial
+              </button>
+            </div>
           </div>
         </div>
       ))}
