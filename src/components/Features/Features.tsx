@@ -80,7 +80,7 @@ const Features: React.FC = () => {
             <thead>
               <tr>
                 <th>Features</th>
-                <th>Circuit House<br/><span>Main Hub</span></th>
+                <th>MAIN<br/><span>Main Hub</span></th>
                 <th>Xtreme<br/><span>Performance</span></th>
                 <th className="pink-header">Pink<br/><span>Women's Only</span></th>
               </tr>

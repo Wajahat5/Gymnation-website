@@ -4,9 +4,9 @@ import './Testimonials.css';
 const testimonialsData = [
   {
     id: 1,
-    quote: "Finally, a gym that opens at 5 am. The morning crew at Circuit House is intense and motivating.",
+    quote: "Finally, a gym that opens at 5 am. The morning crew at gymnation is intense and motivating.",
     author: "Rahul M.",
-    location: "Circuit House Member"
+    location: "Main hub member"
   },
   {
     id: 2,

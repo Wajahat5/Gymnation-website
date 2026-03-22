@@ -2,6 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import './Footer.css';
 import logo from '../../assets/logo.jpg';
 
+const mapQuery = encodeURIComponent('Gym Nation, Near Circuit House, Dibrugarh, Assam 786001');
+const mapEmbedUrl = `https://www.google.com/maps?q=${mapQuery}&z=15&output=embed`;
+
 const Footer: React.FC = () => {
   const footerRef = useRef<HTMLElement>(null);
 
@@ -49,7 +52,7 @@ const Footer: React.FC = () => {
 
         <div className="map-container">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3558.123456789!2d94.9123456!3d27.4812345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x374097f5a5a5a5a5%3A0x1234567890abcdef!2sGym%20Nation!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin"
+            src={mapEmbedUrl}
             width="100%"
             height="100%"
             style={{ border: 0 }}

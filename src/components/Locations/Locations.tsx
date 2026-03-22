@@ -14,7 +14,7 @@ interface LocationData {
 const locations: LocationData[] = [
   {
     id: 'circuit-house',
-    name: "GYM NATION CIRCUIT HOUSE (Main Hub)",
+    name: "GYM NATION (Main Hub)",
     address: "Near Circuit House, Dibrugarh, 786001",
     hours: "Open 5:00 AM - 10:30 PM (Sun 5am-12pm)",
     features: "The 24/7 Energy Hub. Standard equipment, dense clean layout.",
@@ -23,7 +23,7 @@ const locations: LocationData[] = [
   },
   {
     id: 'xtreme',
-    name: "GYM NATION XTREME (Khaliamari)",
+    name: "GYM NATION XTREME (Performance)",
     address: "Khaliamari, opposite Shankerdev Hospital",
     hours: "Flexible 3, 6, 12 Month Plans",
     features: "Premium Powerlifting & Performance. Specialized hammer strength & competition plates.",
